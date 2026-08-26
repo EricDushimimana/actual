@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal Dashboard | ACTUAL ACCOUNTING | Financial & Business Consultancy in Rwanda</title>
+  
+  <meta name="description" content="ACTUAL ACCOUNTING provides professional accounting, bookkeeping, tax compliance, financial reporting, and business consultancy services in Rwanda.">
+  <meta name="author" content="Eric Dushimimana">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="accounting,finance,bookkeeping,tax,Rwanda">
+  
+  <link rel="canonical" href="https://actualaccounting.com/">
+  
+  <meta property="og:title" content="ACTUAL ACCOUNTING | Financial & Business Consultancy in Rwanda">
+  <meta property="og:description" content="Professional accounting, tax compliance, financial reporting, and business consultancy services in Rwanda.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://actualaccounting.com/actual-logo.jpeg">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  </head>
+<body>
+<id id="client-container">
+
+  <!-- Header Navigation -->
+  <header class="site-header" position="fixed" fixed;>
+    <div class="container header-container">
+      <a href="index.html" class="actual-logo" id="header-actual-logo">
+        <div class="logo-badge">
+          <img src="images/actual-logo.jpeg" alt="logo">
+        </div>
+        <div>
+          <span>ACTUAL ACCOUNTING</span>
+          <span class="brand-text-sub">Client Portal</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Main Site</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="consultation.html" class="nav-link">Consultation</a></li>
+          <li><a href="client.html" class="nav-link active"><i class="fa-solid fa-gauge-high"></i> My Portal</a></li>
+          <li><a href="admin.html" class="nav-link" style="color: var(--sunny-yellow);"><i class="fa-solid fa-user-shield"></i> Admin View</a></li>
+        </ul>
+        <div class="header-actions">
+          <button onclick="logoutUser()" class="btn btn-secondary btn-sm" id="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+          </button>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Dashboard Main Section -->
+  <main class="section-padding" style="background-color: var(--soft-bg); flex: 1;">
+    <div class="container">
+      
+      <!-- Welcome Header Banner -->
+      <div class="glass-card" style="padding: 2rem; margin-bottom: 2rem; border-left: 6px solid var(--primary-green);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <span class="role-badge role-client">CLIENT ACCOUNT</span>
+              <span style="font-size: 0.85rem; color: var(--muted);"><i class="fa-solid fa-building"></i> <span id="user-profile-company">Kigali Enterprise Ltd</span></span>
+            </div>
+            <h1 style="font-size: 1.8rem; color: var(--black); margin-bottom: 0.25rem;">
+              Welcome back, <span id="user-profile-name" style="color: var(--primary-green);">Valued Client</span>
+            </h1>
+            <p style="margin: 0; font-size: 0.95rem; color: var(--muted);">
+              Manage your financial advisory bookings, RRA compliance retainer requests, and communications with ACTUAL ACCOUNTING.
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="consultation.html" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-calendar-plus"></i> Book Consultation
+            </a>
+            <a href="admin.html" class="btn btn-secondary btn-sm" style="border: 1px solid var(--sunny-yellow); color: var(--black);">
+              <i class="fa-solid fa-user-shield"></i> Switch to Admin
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview Stats Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+        <div class="glass-card" style="padding: 1.5rem; display: flex; align-items: center; gap: 1.25rem;">
+          <div style="width: 52px; height: 52px; border-radius: var(--radius-md); background: rgba(22, 124, 103, 0.1); color: var(--primary-green); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div>
+            <span style="font-size: 0.82rem; color: var(--muted); text-transform: uppercase; font-weight: 700;">My Consultations</span>
+            <h2 id="stat-client-bookings" style="font-size: 1.8rem; margin: 0; color: var(--black);">0</h2>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 1.5rem; display: flex; align-items: center; gap: 1.25rem;">
+          <div style="width: 52px; height: 52px; border-radius: var(--radius-md); background: rgba(245, 184, 0, 0.15); color: #926C00; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
+          <div>
+            <span style="font-size: 0.82rem; color: var(--muted); text-transform: uppercase; font-weight: 700;">Logged Inquiries</span>
+            <h2 id="stat-client-inquiries" style="font-size: 1.8rem; margin: 0; color: var(--black);">0</h2>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 1.5rem; display: flex; align-items: center; gap: 1.25rem;">
+          <div style="width: 52px; height: 52px; border-radius: var(--radius-md); background: rgba(16, 20, 24, 0.08); color: var(--black); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <span style="font-size: 0.82rem; color: var(--muted); text-transform: uppercase; font-weight: 700;">RRA Compliance Status</span>
+            <h2 style="font-size: 1.2rem; margin: 0; color: var(--primary-green); font-weight: 800;">100% Active</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Client Portal Content Layout -->
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+        
+        <!-- Left Main Column: Bookings & Quick Request -->
+        <div>
+          
+          <!-- Consultations Section -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h3 style="font-size: 1.3rem; color: var(--black);">
+              <i class="fa-solid fa-calendar-days" style="color: var(--primary-green); margin-right: 0.5rem;"></i> My Booked Consultations
+            </h3>
+            <span style="font-size: 0.85rem; color: var(--muted);">Email: <strong id="user-profile-email">jeanluc@kigalienterprise.rw</strong></span>
+          </div>
+
+          <div id="client-bookings-list">
+            <div style="text-align: center; padding: 2rem; color: var(--muted);">
+              <i class="fa-solid fa-spinner fa-spin" style="font-size: 1.5rem;"></i>
+              <p style="margin-top: 0.5rem;">Loading consultation bookings...</p>
+            </div>
+          </div>
+
+          <!-- Quick Booking Form Card inside Dashboard -->
+          <div class="glass-card" style="padding: 2rem; margin-top: 2rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--dark-green); display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fa-solid fa-calendar-plus"></i> Request Additional Advisory Session
+            </h4>
+            <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Book a session directly with our senior accounting and tax team in Kigali.</p>
+
+            <form id="client-quick-book-form">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group" style="margin-bottom:0;">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" id="qb-phone" class="form-control" value="+250 788 111 222" required>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <label class="form-label">Service Category</label>
+                  <select id="qb-service" class="form-control" required>
+                    <option value="tax">Tax Compliance & RRA EBM Audit</option>
+                    <option value="bookkeeping">Bookkeeping & Monthly Ledgers</option>
+                    <option value="reporting">Quarterly Financial Reporting</option>
+                    <option value="payroll">Payroll & RSSB Compliance</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group" style="margin-bottom:0;">
+                  <label class="form-label">Preferred Date</label>
+                  <input type="date" id="qb-date" class="form-control" required>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <label class="form-label">Session Notes / Specific Topic</label>
+                  <input type="text" id="qb-notes" class="form-control" placeholder="e.g., EBM v2 invoice audit setup">
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-calendar-plus"></i> Submit Booking
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Right Sidebar: Inquiries & Group Holdings Directory -->
+        <div>
+          
+          <!-- Inquiries Card -->
+          <div style="margin-bottom: 2rem;">
+            <h3 style="font-size: 1.2rem; color: var(--black); margin-bottom: 1rem;">
+              <i class="fa-solid fa-envelope" style="color: var(--sunny-yellow); margin-right: 0.5rem;"></i> My Inquiries
+            </h3>
+            <div id="client-inquiries-list">
+              <div style="text-align: center; padding: 1.5rem; color: var(--muted);">
+                <p>Loading inquiries...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACTUAL HOLDINGS Group Divisions Card -->
+          <div class="glass-card" style="padding: 1.5rem;">
+            <h4 style="font-size: 1.1rem; color: var(--black); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fa-solid fa-building-columns" style="color: var(--primary-green);"></i> ACTUAL HOLDINGS Group
+            </h4>
+            <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem;">
+              Access services across our 4 practice divisions operating under parent company ACTUAL HOLDINGS CO LTD:
+            </p>
+
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 700; color: var(--dark-green);">
+                <i class="fa-solid fa-calculator"></i> ACTUAL ACCOUNTING (Financial & Tax)
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 700; color: var(--black);">
+                <i class="fa-solid fa-camera"></i> ACTUAL PHOTOGRAPHY (Commercial Media)
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 700; color: var(--black);">
+                <i class="fa-solid fa-pen-nib"></i> ACTUAL DESIGN (Brand & Product Design)
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 700; color: var(--black);">
+                <i class="fa-solid fa-music"></i> ACTUAL MUSIC (Audio Architecture)
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+  <!--client portal.html-->
+  <div class="page-view" id="page-portal">
+   <section class="section-py" style="background:var(--color-surface-subtle);">
+    <div class="container">
+     <div class="portal-client">
+      <!-- Portal Header -->
+      <div class="portal-topbar">
+       <div class="portal-user-meta">
+        <div class="portal-avatar">
+         KT
+        </div>
+        <div>
+         <h2 id="portal-display-company" style="color:#FFF; font-size:1.2rem; margin:0;">
+          Kigali Tech Ventures Ltd
+         </h2>
+         <div id="portal-display-tin" style="color:var(--color-gold); font-size:0.78rem;">
+          RRA TIN: 109847291 • Active Client
+         </div>
+        </div>
+       </div>
+       <div style="display:flex; align-items:center; gap:12px;">
+        <span class="status-badge-active" id="portal-display-plan">
+         Growth Enterprise Plan
+        </span>
+        <button class="btn btn-outline btn-sm" onclick="logoutUser()" style="color:#FFF; border-color:rgba(255,255,255,0.3);">
+         Log Out
+        </button>
+       </div>
+      </div>
+      <!-- Portal Body Grid -->
+      <div class="portal-content-grid">
+       <!-- Left Column: Filings & Document Dropbox -->
+       <div>
+        <h3 style="font-size:1.2rem; color:var(--color-primary-dark); margin-bottom:16px;">
+         Verified Tax Filings &amp; Acknowledgment Slips
+        </h3>
+        <div class="portal-table-wrap" style="border:1px solid var(--color-border); border-radius:var(--radius-md); overflow:hidden; margin-bottom:24px;">
+         <table class="portal-table">
+          <thead>
+           <tr>
+            <th>
+             Document Name
+            </th>
+            <th>
+             Date Processed
+            </th>
+            <th>
+             RRA Status
+            </th>
+            <th>
+             Action
+            </th>
+           </tr>
+          </thead>
+          <tbody id="portal-docs-tbody">
+           <!-- Rendered by script.js -->
+          </tbody>
+         </table>
+        </div>
+        <h3 style="font-size:1.2rem; color:var(--color-primary-dark); margin-bottom:12px;">
+         Secure Document Dropbox (Invoices / EBMs)
+        </h3>
+        <label class="dropbox-zone" for="portal-file-input" style="display:block;">
+         <input accept=".pdf,.jpg,.jpeg,.png,.xlsx" id="portal-file-input" multiple="" style="display:none;" type="file"/>
+         <svg fill="none" height="32" stroke="#0F3D2E" stroke-width="2" style="margin:0 auto 10px auto;" viewbox="0 0 24 24" width="32">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4">
+          </path>
+          <polyline points="17 8 12 3 7 8">
+          </polyline>
+          <line x1="12" x2="12" y1="3" y2="15">
+          </line>
+         </svg>
+         <div style="font-weight:700; color:var(--color-primary-dark);">
+          Click to Browse or Drag &amp; Drop Supplier Invoices / EBMs
+         </div>
+         <div style="font-size:0.78rem; color:var(--color-text-muted); margin-top:4px;">
+          Supported: PDF, JPG, PNG, XLSX (Files are encrypted and sent directly to Lead CPA)
+         </div>
+        </label>
+       </div>
+       <!-- Right Column: CPA Messaging & Account Manager -->
+       <div>
+        <div class="card" style="padding:20px; margin-bottom:20px; background:#F8FAFC;">
+         <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+          <div style="width:40px; height:40px; border-radius:50%; background:var(--color-primary); color:#FFF; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem;">
+           MJ
+          </div>
+          <div>
+           <strong style="color:var(--color-primary-dark); display:block; font-size:0.95rem;">
+            MUGISHA J, CEO
+           </strong>
+           <span style="font-size:0.75rem; color:var(--color-text-muted);">
+            Assigned Lead Tax Consultant
+           </span>
+          </div>
+         </div>
+         <div style="font-size:0.8rem; color:#475569;">
+          ✓ Next Filing: February VAT &amp; PAYE due March 15th.
+          <br/>
+          ✓ EBM compliance status: Clean.
+         </div>
+        </div>
+        <!-- Live Chat Simulation Box -->
+        <div style="border:1px solid var(--color-border); border-radius:var(--radius-md); display:flex; flex-direction:column; height:340px; background:#FFF;">
+         <div style="padding:10px 14px; background:#FAFAFA; border-bottom:1px solid var(--color-border); font-size:0.85rem; font-weight:700; color:var(--color-primary-dark);">
+          Direct ACTUAL AI Support Channel
+         </div>
+         <div id="portal-chat-box" style="flex-grow:1; padding:14px; overflow-y:auto; display:flex; flex-direction:column;">
+          <div style="align-self:flex-start; background:#E8F2EE; color:#0F3D2E; padding:8px 14px; border-radius:10px 10px 10px 0; font-size:0.85rem; max-width:85%; margin-bottom:8px;">
+           Mwaramutse! Your January VAT declaration acknowledgment receipt is ready for download in your portal.
+          </div>
+          <div style="align-self:flex-end; background:#0F3D2E; color:#FFF; padding:8px 14px; border-radius:10px 10px 0 10px; font-size:0.85rem; max-width:85%; margin-bottom:8px;">
+           Murakoze cyane. We have uploaded two new supplier EBM receipts for February.
+          </div>
+         </div>
+         <form id="portal-chat-form" style="padding:10px; border-top:1px solid var(--color-border); display:flex; gap:8px;">
+          <input class="form-input" id="portal-chat-input" placeholder="Type a message to your accountant..." required="" style="padding:8px 12px; font-size:0.85rem;" type="text"/>
+          <button class="btn btn-primary btn-sm" type="submit">
+           Send
+          </button>
+         </form>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 ACTUAL ACCOUNTING. A trading practice of <strong>ACTUAL HOLDINGS CO LTD</strong> (Kigali, Rwanda). All rights reserved.</p>
+        <div>
+          <a href="index.html">Main Site</a> | <a href="admin.html">Admin Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</id>
+<script src="js/animations.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

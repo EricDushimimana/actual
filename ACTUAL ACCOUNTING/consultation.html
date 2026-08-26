@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Consultation | ACTUAL ACCOUNTING | Rwanda</title>
+  <meta name="description" content="Schedule a professional financial consultation with ACTUAL ACCOUNTING in Rwanda. Book bookkeeping, tax compliance, or strategic business advisory sessions.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">
+        <img alt="ACTUAL HOLDING CO LTD Logo" src="images/actual-logo.jpeg"/>
+        </div>
+        <div>
+          <span>ACTUAL ACCOUNTING</span>
+          <span class="brand-text-sub">ACTUAL HOLDINGS CO LTD</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="family.html" class="nav-link">actual family</a></li>
+          <li><a href="consultation.html" class="nav-link active">Consultation</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="header-actions">
+          <a href="login.html" class="auth-link"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+          <a href="consultation.html" class="btn btn-primary btn-sm">
+            <i class="fa-regular fa-calendar-check"></i> Book Consultation
+          </a>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-section" style="padding: 4rem 0 3.5rem 0;">
+    <div class="container">
+      <div class="section-label">
+        <i class="fa-regular fa-calendar-check"></i> Executive Advisory Session
+      </div>
+      <h1 class="hero-title">Book a Business Consultation</h1>
+      <p class="hero-subtitle">
+        Schedule a dedicated session with senior financial advisors from ACTUAL ACCOUNTING to analyze your bookkeeping, tax compliance, or strategic growth framework.
+      </p>
+    </div>
+  </section>
+
+  <!-- Consultation Booking Form & Info Split -->
+  <section class="section-padding" style="background-color: var(--white);">
+    <div class="container">
+      <div class="about-split" style="align-items: flex-start;">
+        
+        <!-- Left Side: Booking Form -->
+        <div class="glass-card reveal-on-scroll" style="padding: 2.5rem;" id="booking-form-wrapper">
+          <h2 style="margin-bottom: 0.5rem; font-size: 1.8rem;">Schedule Your Session</h2>
+          <p style="margin-bottom: 2rem; font-size: 0.95rem; color: var(--muted);">
+            Please fill in your company details below. Our consultancy team in Kigali will confirm your schedule within 24 hours.
+          </p>
+
+          <form id="consultation-form" novalidate>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="full-name">Full Name *</label>
+                <input type="text" id="full-name" class="form-control" placeholder="e.g. Jean-Luc Mugisha" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Business Email *</label>
+                <input type="email" id="email" class="form-control" placeholder="name@company.rw" required>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number *</label>
+                <input type="tel" id="phone" class="form-control" placeholder="+250 788 000 000" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="company">Company / Business Name *</label>
+                <input type="text" id="company" class="form-control" placeholder="ACTUAL Enterprise Ltd" required>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="service-needed">Primary Service Needed *</label>
+                <select id="service-needed" class="form-control" required>
+                  <option value="">Select a Service...</option>
+                  <option value="bookkeeping">Bookkeeping & Ledgers</option>
+                  <option value="tax">Tax Preparation & RRA Compliance</option>
+                  <option value="reporting">Financial Reporting & Statements</option>
+                  <option value="strategic">Strategic Business Planning</option>
+                  <option value="risk">Risk Management Audit</option>
+                  <option value="optimization">Process Optimization</option>
+                  <option value="portfolio">Portfolio Management</option>
+                  <option value="advisory">General Advisory</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="preferred-date">Preferred Meeting Date *</label>
+                <input type="date" id="preferred-date" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="notes">Briefly Describe Your Financial Objectives *</label>
+              <textarea id="notes" class="form-control" placeholder="Tell us about your current accounting setup, key challenges, or upcoming financial goals..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" id="submit-booking-btn">
+              <i class="fa-solid fa-paper-plane"></i> Confirm Consultation Request
+            </button>
+
+          </form>
+        </div>
+
+        <!-- Right Side: Process Recap & Office Details -->
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          
+          <div class="glass-card reveal-on-scroll delay-1" style="padding: 2rem;" id="process-recap-box">
+            <h3 style="margin-bottom: 1.25rem;">Our Advisory Method</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="step-number-node" style="width: 40px; height: 40px; font-size: 0.95rem; flex-shrink: 0; margin: 0;">01</div>
+                <div>
+                  <strong style="display: block; color: var(--black);">01 — Understand</strong>
+                  <span style="font-size: 0.9rem; color: var(--muted);">In-depth review of your business model and objectives.</span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="step-number-node" style="width: 40px; height: 40px; font-size: 0.95rem; flex-shrink: 0; margin: 0;">02</div>
+                <div>
+                  <strong style="display: block; color: var(--black);">02 — Analyze</strong>
+                  <span style="font-size: 0.9rem; color: var(--muted);">Evaluation of your current ledgers, taxes, and workflows.</span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="step-number-node" style="width: 40px; height: 40px; font-size: 0.95rem; flex-shrink: 0; margin: 0;">03</div>
+                <div>
+                  <strong style="display: block; color: var(--black);">03 — Advise</strong>
+                  <span style="font-size: 0.9rem; color: var(--muted);">Delivery of clear, tailored financial recommendations.</span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div class="step-number-node" style="width: 40px; height: 40px; font-size: 0.95rem; flex-shrink: 0; margin: 0;">04</div>
+                <div>
+                  <strong style="display: block; color: var(--black);">04 — Support</strong>
+                  <span style="font-size: 0.9rem; color: var(--muted);">Ongoing partner support for ongoing compliance & growth.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dark-glass-card reveal-on-scroll delay-2" style="padding: 2rem;">
+            <h4 style="color: var(--white); margin-bottom: 1rem;"><i class="fa-solid fa-location-dot" style="color: var(--sunny-yellow);"></i> Advisory Practice Location</h4>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; margin-bottom: 1rem;">
+              ACTUAL ACCOUNTING<br>
+              A trading name (BDA) of ACTUAL HOLDINGS CO LTD<br>
+              Kigali, Rwanda
+            </p>
+            <p style="color: var(--sunny-yellow); font-size: 0.9rem; font-weight: 700; margin: 0;">
+              <i class="fa-solid fa-envelope"></i> info@actualaccounting.rw
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo footer-logo">
+            <div class="logo-badge">
+             <img src="images/actual-logo.jpeg" alt="actual logo">
+            </div>
+            <div>
+              <span>ACTUAL ACCOUNTING</span>
+              <span class="brand-text-sub" style="color: var(--sunny-yellow);">ACTUAL HOLDINGS CO LTD</span>
+            </div>
+          </a>
+          <p>
+            ACTUAL ACCOUNTING is a trading name (BDA) of ACTUAL HOLDINGS CO LTD, delivering modern accounting and strategic business consultancy in Rwanda.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="consultation.html">Consultation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Core Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#accounting">Bookkeeping</a></li>
+            <li><a href="services.html#accounting">Tax Compliance</a></li>
+            <li><a href="services.html#accounting">Financial Reporting</a></li>
+            <li><a href="services.html#consulting">Strategic Planning</a></li>
+            <li><a href="services.html#consulting">Risk Management</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Location & Details</h4>
+          <ul class="contact-info-list">
+            <li class="contact-info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Kigali, Rwanda</span>
+            </li>
+            <li class="contact-info-item">
+              <i class="fa-solid fa-building"></i>
+              <span>ACTUAL HOLDINGS CO LTD</span>
+            </li>
+            <li class="contact-info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>info@actualaccounting.rw</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 ACTUAL ACCOUNTING. All rights reserved. A trading name of ACTUAL HOLDINGS CO LTD.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="login.html" style="color: inherit;">Client Portal</a>
+          <a href="contact.html" style="color: inherit;">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

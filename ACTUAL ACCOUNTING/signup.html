@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Client Account | ACTUAL ACCOUNTING</title>
+  <meta name="description" content="Request portal registration for ACTUAL ACCOUNTING client services in Rwanda.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body style="background: radial-gradient(circle at 50% 30%, rgba(22, 124, 103, 0.08) 0%, transparent 60%);">
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">
+        <img alt="ACTUAL HOLDING CO LTD Logo" src="images/actual-logo.jpeg"/>
+        </div>
+        <div>
+          <span>ACTUAL ACCOUNTING</span>
+          <span class="brand-text-sub">ACTUAL HOLDINGS CO LTD</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="family.html" class="nav-link">Actual family</a></li>
+          <li><a href="consultation.html" class="nav-link">Consultation</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="header-actions">
+          <a href="login.html" class="auth-link"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+          <a href="consultation.html" class="btn btn-primary btn-sm">
+            <i class="fa-regular fa-calendar-check"></i> Book Consultation
+          </a>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Signup Main Container -->
+  <main class="section-padding" style="display: flex; align-items: center; justify-content: center; min-height: 80vh;">
+    <div class="container" style="max-width: 560px;">
+      
+      <div class="glass-card reveal-on-scroll" style="padding: 2.5rem;" id="signup-card">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <div class="logo-badge" style="margin: 0 auto 1rem auto; width: 48px; height: 48px; font-size: 1.4rem;">
+            <i class="fa-solid fa-user-plus"></i>
+          </div>
+          <h2 style="font-size: 1.75rem; margin-bottom: 0.4rem;">Portal Registration Request</h2>
+          <p style="font-size: 0.9rem; color: var(--muted);">Register for ACTUAL ACCOUNTING Client Services</p>
+        </div>
+
+        <form id="signup-form" novalidate>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="signup-name">Full Name *</label>
+              <input type="text" id="signup-name" class="form-control" placeholder="e.g. Eric Murenzi" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="signup-company">Company Name *</label>
+              <input type="text" id="signup-company" class="form-control" placeholder="Murenzi Traders Ltd" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="signup-email">Business Email *</label>
+              <input type="email" id="signup-email" class="form-control" placeholder="eric@murenzi.rw" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="signup-phone">Phone Number *</label>
+              <input type="tel" id="signup-phone" class="form-control" placeholder="+250 788 999 000" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="password">Create Password *</label>
+              <input type="password" id="password" class="form-control" placeholder="••••••••••••" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="confirm-password">Confirm Password *</label>
+              <input type="password" id="confirm-password" class="form-control" placeholder="••••••••••••" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" id="signup-submit-btn">
+            <i class="fa-solid fa-user-check"></i> Request Registration
+          </button>
+
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.92rem;">
+          Already registered? <a href="login.html" style="color: var(--primary-green); font-weight: 700;">Sign In</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0;">
+        <div>
+          &copy; 2026 ACTUAL ACCOUNTING. All rights reserved. A trading name of ACTUAL HOLDINGS CO LTD.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="contact.html" style="color: inherit;">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

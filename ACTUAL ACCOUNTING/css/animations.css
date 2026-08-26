@@ -1,0 +1,142 @@
+/* ==========================================================================
+   ACTUAL ACCOUNTING - Animations & Keyframe Transitions
+   ========================================================================== */
+
+/* Keyframe Animations */
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    box-shadow: 0 8px 24px rgba(16, 20, 24, 0.08);
+  }
+  50% {
+    box-shadow: 0 12px 32px rgba(22, 124, 103, 0.2);
+  }
+}
+
+@keyframes growBar {
+  from {
+    height: 0%;
+  }
+  to {
+    height: var(--bar-height, 70%);
+  }
+}
+
+@keyframes rippleEffect {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* Scroll Reveal Utility Classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* Interactive Ripple Container */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: rippleEffect 0.6s linear;
+}
+
+/* Accessibility: Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .floating-card {
+    animation: none !important;
+  }
+  
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+/* ===== FAMILY ANIMATIONS ===== */
+
+.family-card{
+  animation:familyFade .6s ease both;
+}
+
+.family-card:nth-child(2){
+  animation-delay:.1s;
+}
+
+.family-card:nth-child(3){
+  animation-delay:.2s;
+}
+
+.family-card:nth-child(4){
+  animation-delay:.3s;
+}
+
+.family-hero-grid{
+  animation:familyUp .7s ease both;
+}
+
+@keyframes familyFade{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes familyUp{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
